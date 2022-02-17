@@ -45,3 +45,42 @@ span {
     visibility: hidden;
     overflow: hidden;
 }
+
+.err {
+    visibility: visible;
+    opacity: 1;
+}
+
+h4 {
+    text-align: center;
+    margin-block: 1em;
+}
+
+.form-group {
+    display: flex;
+    margin-top: 1em;
+}
+
+.form-group>label,
+.form-group>p:first-child {
+    text-align: center;
+    flex: 1;
+}
+
+.form-group>* {
+    flex: 2;
+}
+
+.percent-box {
+    display: flex;
+}
+
+.percent-box>* {
+    flex: 1;
+}
+
+button.btn {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
