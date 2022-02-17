@@ -36,3 +36,26 @@ window.addEventListener('load', () => {
                     this.currentBalance = origin - this.totalExpense
 
                 }
+                calcTotalExpense() {
+                    let sum = 0
+                    sum += +this.expenses.food.value
+                    sum += +this.expenses.rent.value
+                    sum += +this.expenses.clothes.value
+                    this.totalExpense = sum
+                }
+
+                calcRemains() {
+                    this.calcTotalExpense()
+                    this.calcSavedAmount()
+                    this.remains = this.income.value - this.totalExpense - this.savedAmount
+                }
+                calcSavedAmount() {
+                        this.calcCurrentBalance()
+                        if (this.percentage.value < 0) {
+                            this.error = true
+                            this.savedAmount = 0
+                            return
+                        } else if (!this.percentage.value) {
+                            this.savedAmount = 0
+                            return
+                        }
